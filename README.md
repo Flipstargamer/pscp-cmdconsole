@@ -37,3 +37,9 @@ Property List:
 Method List:
 * Send(Text: string) - Sends a message to the console as a log.
 * Error(Text: string) - Sends a message to the console as a error.
+
+# Issues/Bug Reports
+Found a bug in the command console or want to suggest a feature, feel free to create an issue on this Github repo.
+
+# Contributing
+Want to contribute to this project, feel free to fork and create a pull request.
