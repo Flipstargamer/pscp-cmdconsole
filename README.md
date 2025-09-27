@@ -4,6 +4,8 @@ PSCP CmdConsole is a console that provides the ability to run commands. This is 
 # Installation
 The source code is divided into folders which are named after where they should be put. Each file should be placed in seperate files preferably under the same name. Once everything has installed either run all the files in HooksStarted or restart the server.
 
+By default, press ``` ` ``` to toggle the console.
+
 ## Permission Levels
 The file ```Permissions``` has a few permissions made for you, but you need to give the server owner a specific permission. In that file replace OWNER_ID with the owner's Roblox ID. Feel free to change the permission levels to what you desire.
 
