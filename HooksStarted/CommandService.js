@@ -85,6 +85,8 @@ function CommandService.SendMessage(Player, Message, Type) {
 	Template.TextColor3 = MessageColors[Type]
 	Template.Visible = true
 	Template.Parent = Gui.Background.History
+	
+	Player:SetInstanceProperty(Gui.Background.History, "CanvasPosition", Vector2.new(0, Gui.Background.History.AbsoluteCanvasSize.Y))
 }
 
 function CommandService.AddCommand(CommandInfo) {
@@ -110,6 +112,8 @@ function CommandService.E_SetupGui(Player) {
 	
 	Gui.Enabled = false
 	Gui.Parent = Player.PlayerGui
+	
+	Gui.Background.History.UIListLayout.Padding = UDim.new()
 	
 	var CleanUpConnection;
 	CleanUpConnection = Player.Destroying:Connect(function() {
