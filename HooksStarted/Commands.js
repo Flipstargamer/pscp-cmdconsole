@@ -11,10 +11,10 @@ CommandService.AddCommand({
 	
 	Execute = function(Context, Args) {
 		if (Args[1]) {
-			var Command = CommandService.GetCommand(Args[1])
+			var Command = CommandService.GetCommand(string.lower(Args[1]))
 			
 			if (!Command) {
-				Context:Error(`{Args[1]} was not found. Aliases are not permitted here.`)
+				Context:Error(`{string.lower(Args[1])} was not found.`)
 				return;
 			}
 			
