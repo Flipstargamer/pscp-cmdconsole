@@ -162,8 +162,8 @@ function CommandService.GetCommands() {
 	return CommandList;
 }
 
-function CommandService.GetCommand(Command) {
-	return CommandList[Command];
+function CommandService.GetCommand(CommandInput) {
+	return CommandList[ViableCommands[CommandInput]];
 }
 
 function CommandService.AddPermissionLevel(Name, Level) {
