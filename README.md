@@ -2,7 +2,7 @@
 PSCP CmdConsole is a console that provides the ability to run commands. This is mostly based on Cmdr, a command line tool for Roblox.
 
 # Installation
-The source code is divided into folders which are named after where they should be put. Each file should be placed in seperate files preferably under the same name. Once everything has installed either run all the files in HooksStarted or restart the server.
+Download the source code from the release page. The source code is divided into folders which are named after where they should be put. Each file should be placed in seperate files preferably under the same name. Once everything has installed either run all the files in HooksStarted or restart the server.
 
 By default, press ``` ` ``` to toggle the console.
 
