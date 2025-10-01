@@ -127,14 +127,8 @@ function CommandService.E_SetupGui(Player) {
 		if (Processed) return;
 		
 		if (Input.Keycode != OpenGuiBind) return;
-		
-		Gui.Enabled = !Gui.Enabled
-		
-		if (Gui.Enabled) {
-			Player:CallInstanceFunction(Command, "CaptureFocus", Command)
-		} else {
-			Player:CallInstanceFunction(Command, "ReleaseFocus", Command)
-		}
+	
+		CommandService.ToggleWindow(Player)
 	})
 	
 	var FocusLostConnection;
@@ -160,6 +154,19 @@ function CommandService.E_SetupGui(Player) {
 	CommandGuis[Player] = Gui
 	
 	CommandService.SendMessage(Player, "Copyright Disclaimer: This command console is made by @Flipstargamer and licensed under the MIT License.", "Log")
+}
+
+function CommandService.ToggleWindow(Player) {
+	var Gui = CommandGuis[Player]
+	var Command = Gui.Background.Command
+	
+	Gui.Enabled = !Gui.Enabled
+		
+	if (Gui.Enabled) {
+		Player:CallInstanceFunction(Command, "CaptureFocus", Command)
+	} else {
+		Player:CallInstanceFunction(Command, "ReleaseFocus", Command)
+	}
 }
 
 function CommandService.GetCommands() {
