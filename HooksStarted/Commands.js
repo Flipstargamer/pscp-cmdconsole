@@ -54,6 +54,19 @@ CommandService.AddCommand({
 })
 
 CommandService.AddCommand({
+	Name = "exit",
+	Level = 0,
+	Aliases = {"close", "toggle"},
+	Description = "Toggles the window.",
+	
+	Execute = function(Context) {
+		CommandService.ToggleWindow(Context.Executor)
+		
+		return "Window has been toggled."
+	}
+})
+
+CommandService.AddCommand({
 	Name = "permissionlevel",
 	Level = 0,
 	Aliases = {"level", "mylevel", "permission"},
@@ -77,7 +90,7 @@ CommandService.AddCommand({
 
 CommandService.AddCommand({
 	Name = "setpermissionlevel",
-	Level = 100,
+	Level = 45,
 	Aliases = {"setlevel"},
 	ArgInfo = "<target> <level>",
 	Description = "Sets someone's permission level",
